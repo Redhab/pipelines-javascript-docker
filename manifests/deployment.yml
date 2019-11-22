@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: redhabpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: redhabpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: redhabpipelinesjavascriptdocker 
+          image: redhaacrwebinar.azurecr.io/redhabpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
